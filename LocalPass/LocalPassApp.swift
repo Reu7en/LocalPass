@@ -2,14 +2,14 @@
 //  LocalPassApp.swift
 //  LocalPass
 //
-//  Created by Reuben on 17/08/2023.
+//  Created by Reuben on 20/06/2024.
 //
 
 import SwiftUI
 
 /**
  LocalPass
-     Copyright (C) 2023 - Reuben Baker
+     Copyright (C) 2024 - Reuben Baker
 
      This program is free software: you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -26,58 +26,9 @@ import SwiftUI
  */
 @main
 struct LocalPassApp: App {
-    
-    @Environment(\.scenePhase) private var scenePhase
-    @Environment(\.dismiss) private var dismiss
-    @StateObject private var copyPopupOverlayViewModel = CopyPopupOverlayViewModel()
-    @StateObject private var privacyOverlayViewModel = PrivacyOverlayViewModel()
-    @StateObject private var authenticationViewModel = AuthenticationViewModel()
-    @State private var authenticationStatus: Bool = false
-    static var settings = Settings.shared
-    
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                if LocalPassApp.settings.signedUp {
-                    ZStack {
-                        if authenticationStatus {
-                            MainView()
-                                .environmentObject(copyPopupOverlayViewModel)
-                                .environmentObject(privacyOverlayViewModel)
-                                .environmentObject(authenticationViewModel)
-                                .environment(\.scenePhase, scenePhase)
-                        } else {
-                            AuthenticationView()
-                                .environmentObject(authenticationViewModel)
-                        }
-                    }
-                    .animation(.easeInOut, value: authenticationViewModel.authenticated)
-                } else {
-                    SignUpRootView()
-                        .environmentObject(authenticationViewModel)
-                }
-            }
-            .animation(.easeInOut, value: LocalPassApp.settings.signedUp)
-            .overlay(PrivacyOverlayView().environmentObject(privacyOverlayViewModel))
-        }
-        .onChange(of: authenticationViewModel.authenticated) { authenticatedStatus in
-            authenticationStatus = authenticatedStatus
-        }
-        .onChange(of: scenePhase) { phase in
-            withAnimation(.easeOut) {
-                if phase != .active {
-                    privacyOverlayViewModel.showPrivacyOverlay = true
-                    
-                    if LocalPassApp.settings.lockVaultOnBackground {
-                        DispatchQueue.main.async {
-                            authenticationViewModel.authenticated = false
-                            authenticationViewModel.authenticatedWithBiometrics = false
-                        }
-                    }
-                } else {
-                    privacyOverlayViewModel.showPrivacyOverlay = false
-                }
-            }
+            RootView()
         }
     }
 }
