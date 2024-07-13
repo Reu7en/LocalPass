@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Login: Identifiable, Equatable, Codable {
+struct Login: FolderContent {
     var name: String?
     var username: Username?
     var password: String?
@@ -15,17 +15,14 @@ struct Login: Identifiable, Equatable, Codable {
     var otpKey: String?
     var backupCodes: [String]?
     var notes: [String]?
-    let creationDate: Date
+    var showInAutofill: Bool
+    var starred: Bool
     var updatedDate: Date?
     var passwordUpdatedDate: Date?
     var markedForDeletionDate: Date?
-    var starred: Bool
-    var showInAutofill: Bool
-    let id: UUID
     
-    static func == (lhs: Login, rhs: Login) -> Bool {
-        lhs.id == rhs.id
-    }
+    let creationDate: Date
+    let id: UUID
     
     init(
         name: String? = nil,
@@ -35,13 +32,7 @@ struct Login: Identifiable, Equatable, Codable {
         otpKey: String? = nil,
         backupCodes: [String]? = nil,
         notes: [String]? = nil,
-        creationDate: Date = Date(),
-        updatedDate: Date? = nil,
-        passwordUpdatedDate: Date? = nil,
-        markedForDeletionDate: Date? = nil,
-        starred: Bool = false,
-        showInAutofill: Bool = false,
-        id: UUID = UUID()
+        showInAutofill: Bool = false
     ) {
         self.name = name
         self.username = username
@@ -50,12 +41,13 @@ struct Login: Identifiable, Equatable, Codable {
         self.otpKey = otpKey
         self.backupCodes = backupCodes
         self.notes = notes
-        self.creationDate = creationDate
-        self.updatedDate = updatedDate
-        self.passwordUpdatedDate = passwordUpdatedDate
-        self.markedForDeletionDate = markedForDeletionDate
-        self.starred = starred
         self.showInAutofill = showInAutofill
-        self.id = id
+        self.starred = false
+        self.updatedDate = nil
+        self.passwordUpdatedDate = nil
+        self.markedForDeletionDate = nil
+        
+        self.creationDate = Date()
+        self.id = UUID()
     }
 }

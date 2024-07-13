@@ -9,23 +9,22 @@ import Foundation
 
 struct Email: Equatable, Codable {
     var address: String
-    let creationDate: Date
     var updatedDate: Date?
     var markedForDeletionDate: Date?
+    
+    let creationDate: Date
     
     static func == (lhs: Email, rhs: Email) -> Bool {
         lhs.address == rhs.address
     }
     
     init(
-        address: String,
-        creationDate: Date = Date(),
-        updatedDate: Date? = nil,
-        markedForDeletionDate: Date? = nil
+        address: String
     ) {
         self.address = address
-        self.creationDate = creationDate
-        self.updatedDate = updatedDate
-        self.markedForDeletionDate = markedForDeletionDate
+        self.updatedDate = nil
+        self.markedForDeletionDate = nil
+        
+        self.creationDate = Date()
     }
 }

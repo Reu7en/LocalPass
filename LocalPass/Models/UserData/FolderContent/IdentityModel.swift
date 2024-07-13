@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Identity: Identifiable, Equatable, Codable {
+struct Identity: FolderContent {
     var name: String?
     var title: Title?
     var firstName: String?
@@ -19,15 +19,12 @@ struct Identity: Identifiable, Equatable, Codable {
     var phoneNumbers: [String]?
     var documents: [Document]?
     var addresses: [Address]?
-    let creationDate: Date
     var updatedDate: Date?
     var markedForDeletionDate: Date?
     var starred: Bool
-    let id: UUID
     
-    static func == (lhs: Identity, rhs: Identity) -> Bool {
-        lhs.id == rhs.id
-    }
+    let creationDate: Date
+    let id: UUID
     
     init(
         name: String? = nil,
@@ -40,12 +37,7 @@ struct Identity: Identifiable, Equatable, Codable {
         emails: [Email]? = nil,
         phoneNumbers: [String]? = nil,
         documents: [Document]? = nil,
-        addresses: [Address]? = nil,
-        creationDate: Date = Date(),
-        updatedDate: Date? = nil,
-        markedForDeletionDate: Date? = nil,
-        starred: Bool = false,
-        id: UUID = UUID()
+        addresses: [Address]? = nil
     ) {
         self.name = name
         self.title = title
@@ -58,11 +50,12 @@ struct Identity: Identifiable, Equatable, Codable {
         self.phoneNumbers = phoneNumbers
         self.documents = documents
         self.addresses = addresses
-        self.creationDate = creationDate
-        self.updatedDate = updatedDate
-        self.markedForDeletionDate = markedForDeletionDate
-        self.starred = starred
-        self.id = id
+        self.updatedDate = nil
+        self.markedForDeletionDate = nil
+        self.starred = false
+        
+        self.creationDate = Date()
+        self.id = UUID()
     }
 }
 

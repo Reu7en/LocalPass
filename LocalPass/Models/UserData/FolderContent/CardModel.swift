@@ -7,39 +7,31 @@
 
 import Foundation
 
-struct Card: Identifiable, Equatable, Codable {
+struct Card: FolderContent {
     var name: String?
     var holder: String?
     var number: String?
-    var expirationMonth: ClosedRange<Int>?
-    var expirationYear: Range<Int>?
+    var expirationMonth: Int?
+    var expirationYear: Int?
     var securityCode: Int?
     var notes: [String]?
-    let creationDate: Date
     var updatedDate: Date?
     var markedForDeletionDate: Date?
     var starred: Bool
     var showInAutofill: Bool
-    let id: UUID
     
-    static func == (lhs: Card, rhs: Card) -> Bool {
-        lhs.id == rhs.id
-    }
+    let creationDate: Date
+    let id: UUID
     
     init(
         name: String? = nil,
         holder: String? = nil,
         number: String? = nil,
-        expirationMonth: ClosedRange<Int>? = 0...12,
-        expirationYear: Range<Int>? = nil,
+        expirationMonth: Int? = nil,
+        expirationYear: Int? = nil,
         securityCode: Int? = nil,
         notes: [String]? = nil,
-        creationDate: Date = Date(),
-        updatedDate: Date? = nil,
-        markedForDeletionDate: Date? = nil,
-        starred: Bool = false,
-        showInAutofill: Bool = false,
-        id: UUID = UUID()
+        showInAutofill: Bool = false
     ) {
         self.name = name
         self.holder = holder
@@ -48,11 +40,12 @@ struct Card: Identifiable, Equatable, Codable {
         self.expirationYear = expirationYear
         self.securityCode = securityCode
         self.notes = notes
-        self.creationDate = creationDate
-        self.updatedDate = updatedDate
-        self.markedForDeletionDate = markedForDeletionDate
-        self.starred = starred
+        self.updatedDate = nil
+        self.markedForDeletionDate = nil
+        self.starred = false
         self.showInAutofill = showInAutofill
-        self.id = id
+        
+        self.creationDate = Date()
+        self.id = UUID()
     }
 }

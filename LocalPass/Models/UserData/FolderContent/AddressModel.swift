@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Address: Identifiable, Equatable, Codable {
+struct Address: FolderContent {
     var name: String?
     var address1: String?
     var address2: String?
@@ -15,16 +15,13 @@ struct Address: Identifiable, Equatable, Codable {
     var state: String?
     var zip: String?
     var country: String?
-    let creationDate: Date
     var updatedDate: Date?
     var markedForDeletionDate: Date?
     var starred: Bool
     var showInAutofill: Bool
-    let id: UUID
     
-    static func == (lhs: Address, rhs: Address) -> Bool {
-        lhs.id == rhs.id
-    }
+    let creationDate: Date
+    let id: UUID
     
     init(
         name: String? = nil,
@@ -33,13 +30,8 @@ struct Address: Identifiable, Equatable, Codable {
         city: String? = nil,
         state: String? = nil,
         zip: String? = nil,
-        country: String? = nil, 
-        creationDate: Date = Date(),
-        updatedDate: Date? = nil,
-        markedForDeletionDate: Date? = nil,
-        starred: Bool = false,
-        showInAutofill: Bool = false,
-        id: UUID = UUID()
+        country: String? = nil,
+        showInAutofill: Bool = false
     ) {
         self.name = name
         self.address1 = address1
@@ -48,11 +40,12 @@ struct Address: Identifiable, Equatable, Codable {
         self.state = state
         self.zip = zip
         self.country = country
-        self.creationDate = creationDate
-        self.updatedDate = updatedDate
-        self.markedForDeletionDate = markedForDeletionDate
-        self.starred = starred
+        self.updatedDate = nil
+        self.markedForDeletionDate = nil
+        self.starred = false
         self.showInAutofill = showInAutofill
-        self.id = id
+        
+        self.creationDate = Date()
+        self.id = UUID()
     }
 }
