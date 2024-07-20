@@ -13,7 +13,6 @@ struct UserData: Identifiable, Codable {
     var cards: [FolderContentType<Card>]?
     var identities: [FolderContentType<Identity>]?
     var documents: [FolderContentType<Document>]?
-    var addresses: [FolderContentType<Address>]?
     var userSettings: UserSettings
     
     let id: UUID
@@ -24,7 +23,6 @@ struct UserData: Identifiable, Codable {
         self.cards = nil
         self.identities = nil
         self.documents = nil
-        self.addresses = nil
         
         self.userSettings = UserSettings()
         self.id = UUID()

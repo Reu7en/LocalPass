@@ -27,6 +27,12 @@
 		1BF1A7D62A8E4F7C00663733 /* LocalPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1A7D52A8E4F7C00663733 /* LocalPassApp.swift */; };
 		1BF1A7DA2A8E4F7D00663733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1A7D92A8E4F7D00663733 /* Assets.xcassets */; };
 		1BF1A7DD2A8E4F7D00663733 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1A7DC2A8E4F7D00663733 /* Preview Assets.xcassets */; };
+		1BF44F8B2C43281E001E6470 /* SuggestionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F8A2C43281E001E6470 /* SuggestionSettingsModel.swift */; };
+		1BF44F8D2C43282A001E6470 /* RecycleBinSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F8C2C43282A001E6470 /* RecycleBinSettingsModel.swift */; };
+		1BF44F8F2C432838001E6470 /* EncryptionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F8E2C432838001E6470 /* EncryptionSettingsModel.swift */; };
+		1BF44F912C432846001E6470 /* HomeViewSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F902C432846001E6470 /* HomeViewSettingsModel.swift */; };
+		1BF44F932C4B2800001E6470 /* BiometricSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F922C4B2800001E6470 /* BiometricSettingsModel.swift */; };
+		1BF44F982C4B4179001E6470 /* PermissionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F972C4B4179001E6470 /* PermissionSettingsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +72,12 @@
 		1BF1A7D52A8E4F7C00663733 /* LocalPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPassApp.swift; sourceTree = "<group>"; };
 		1BF1A7D92A8E4F7D00663733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BF1A7DC2A8E4F7D00663733 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1BF44F8A2C43281E001E6470 /* SuggestionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionSettingsModel.swift; sourceTree = "<group>"; };
+		1BF44F8C2C43282A001E6470 /* RecycleBinSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleBinSettingsModel.swift; sourceTree = "<group>"; };
+		1BF44F8E2C432838001E6470 /* EncryptionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionSettingsModel.swift; sourceTree = "<group>"; };
+		1BF44F902C432846001E6470 /* HomeViewSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSettingsModel.swift; sourceTree = "<group>"; };
+		1BF44F922C4B2800001E6470 /* BiometricSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricSettingsModel.swift; sourceTree = "<group>"; };
+		1BF44F972C4B4179001E6470 /* PermissionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionSettingsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +112,7 @@
 			children = (
 				1B8CBB792C4221CE000CE849 /* UserData */,
 				1B8CBB772C4221A1000CE849 /* Folders */,
-				1B8CBB782C4221AC000CE849 /* Settings */,
+				1B8CBB782C4221AC000CE849 /* UserSettings */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,13 +141,14 @@
 			path = Folders;
 			sourceTree = "<group>";
 		};
-		1B8CBB782C4221AC000CE849 /* Settings */ = {
+		1B8CBB782C4221AC000CE849 /* UserSettings */ = {
 			isa = PBXGroup;
 			children = (
+				1BF44F882C4327E4001E6470 /* SupportingModels */,
 				1B8CBB712C421B13000CE849 /* SettingModel.swift */,
 				1B8CBB5A2C3C8BEB000CE849 /* UserSettingsModel.swift */,
 			);
-			path = Settings;
+			path = UserSettings;
 			sourceTree = "<group>";
 		};
 		1B8CBB792C4221CE000CE849 /* UserData */ = {
@@ -150,6 +163,7 @@
 		1B8CBB7A2C4221EE000CE849 /* FolderContent */ = {
 			isa = PBXGroup;
 			children = (
+				1B8CBB7B2C4221F5000CE849 /* SupportingModels */,
 				1B8CBB472C248957000CE849 /* LoginModel.swift */,
 				1B8CBB582C3C86F0000CE849 /* AccountModel.swift */,
 				1B8CBB4B2C2493F4000CE849 /* NoteModel.swift */,
@@ -157,18 +171,17 @@
 				1B8CBB502C3519AA000CE849 /* IdentityModel.swift */,
 				1B8CBB522C351C71000CE849 /* DocumentModel.swift */,
 				1B8CBB542C351D19000CE849 /* AddressModel.swift */,
-				1B8CBB7B2C4221F5000CE849 /* SupportingTypes */,
 			);
 			path = FolderContent;
 			sourceTree = "<group>";
 		};
-		1B8CBB7B2C4221F5000CE849 /* SupportingTypes */ = {
+		1B8CBB7B2C4221F5000CE849 /* SupportingModels */ = {
 			isa = PBXGroup;
 			children = (
 				1B8CBB5E2C3C8DFD000CE849 /* EmailModel.swift */,
 				1B8CBB5C2C3C8CCB000CE849 /* UsernameModel.swift */,
 			);
-			path = SupportingTypes;
+			path = SupportingModels;
 			sourceTree = "<group>";
 		};
 		1BF1A7C92A8E4F7C00663733 = {
@@ -210,6 +223,19 @@
 				1BF1A7DC2A8E4F7D00663733 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1BF44F882C4327E4001E6470 /* SupportingModels */ = {
+			isa = PBXGroup;
+			children = (
+				1BF44F8A2C43281E001E6470 /* SuggestionSettingsModel.swift */,
+				1BF44F8C2C43282A001E6470 /* RecycleBinSettingsModel.swift */,
+				1BF44F8E2C432838001E6470 /* EncryptionSettingsModel.swift */,
+				1BF44F902C432846001E6470 /* HomeViewSettingsModel.swift */,
+				1BF44F922C4B2800001E6470 /* BiometricSettingsModel.swift */,
+				1BF44F972C4B4179001E6470 /* PermissionSettingsModel.swift */,
+			);
+			path = SupportingModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,15 +315,21 @@
 				1B8CBB5F2C3C8DFD000CE849 /* EmailModel.swift in Sources */,
 				1B1028D32C2481170088A405 /* RootView.swift in Sources */,
 				1B8CBB5B2C3C8BEB000CE849 /* UserSettingsModel.swift in Sources */,
+				1BF44F932C4B2800001E6470 /* BiometricSettingsModel.swift in Sources */,
 				1B8CBB482C248957000CE849 /* LoginModel.swift in Sources */,
 				1B8CBB612C3DCE47000CE849 /* FolderModel.swift in Sources */,
+				1BF44F912C432846001E6470 /* HomeViewSettingsModel.swift in Sources */,
 				1BF1A7D62A8E4F7C00663733 /* LocalPassApp.swift in Sources */,
 				1B8CBB762C4220E6000CE849 /* FolderContentTypeModel.swift in Sources */,
+				1BF44F8F2C432838001E6470 /* EncryptionSettingsModel.swift in Sources */,
+				1BF44F8D2C43282A001E6470 /* RecycleBinSettingsModel.swift in Sources */,
 				1B8CBB552C351D19000CE849 /* AddressModel.swift in Sources */,
 				1B8CBB592C3C86F0000CE849 /* AccountModel.swift in Sources */,
 				1B8CBB5D2C3C8CCB000CE849 /* UsernameModel.swift in Sources */,
+				1BF44F982C4B4179001E6470 /* PermissionSettingsModel.swift in Sources */,
 				1B8CBB512C3519AA000CE849 /* IdentityModel.swift in Sources */,
 				1B8CBB702C421623000CE849 /* UserDataModel.swift in Sources */,
+				1BF44F8B2C43281E001E6470 /* SuggestionSettingsModel.swift in Sources */,
 				1B8CBB4F2C3516A7000CE849 /* CardModel.swift in Sources */,
 				1B8CBB532C351C71000CE849 /* DocumentModel.swift in Sources */,
 				1B8CBB742C4220C4000CE849 /* FolderContentModel.swift in Sources */,
