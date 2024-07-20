@@ -8,17 +8,17 @@
 import Foundation
 
 struct UserData: Identifiable, Codable {
-    var logins: [FolderContentType<Login>]?
-    var notes: [FolderContentType<Note>]?
-    var cards: [FolderContentType<Card>]?
-    var identities: [FolderContentType<Identity>]?
-    var documents: [FolderContentType<Document>]?
+    var accounts: Folder<Account>?
+    var notes: Folder<Note>?
+    var cards: Folder<Card>?
+    var identities: Folder<Identity>?
+    var documents: Folder<Document>?
     var userSettings: UserSettings
     
     let id: UUID
     
     init() {
-        self.logins = nil
+        self.accounts = nil
         self.notes = nil
         self.cards = nil
         self.identities = nil
