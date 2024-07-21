@@ -21,6 +21,9 @@
 		1B7E313C2C4D5B6A005CA8A6 /* SampleUsernames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E313B2C4D5B6A005CA8A6 /* SampleUsernames.swift */; };
 		1B7E313E2C4D5B79005CA8A6 /* SampleAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E313D2C4D5B79005CA8A6 /* SampleAddresses.swift */; };
 		1B7E31402C4D9659005CA8A6 /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E313F2C4D9659005CA8A6 /* URLValidator.swift */; };
+		1B7E31422C4DC12F005CA8A6 /* CardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31412C4DC12F005CA8A6 /* CardValidator.swift */; };
+		1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift */; };
+		1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndex.swift */; };
 		1B8CBB432C248517000CE849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CBB422C248517000CE849 /* LaunchScreen.storyboard */; };
 		1B8CBB482C248957000CE849 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CBB472C248957000CE849 /* LoginModel.swift */; };
 		1B8CBB4C2C2493F4000CE849 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CBB4B2C2493F4000CE849 /* NoteModel.swift */; };
@@ -76,6 +79,9 @@
 		1B7E313B2C4D5B6A005CA8A6 /* SampleUsernames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUsernames.swift; sourceTree = "<group>"; };
 		1B7E313D2C4D5B79005CA8A6 /* SampleAddresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAddresses.swift; sourceTree = "<group>"; };
 		1B7E313F2C4D9659005CA8A6 /* URLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
+		1B7E31412C4DC12F005CA8A6 /* CardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidator.swift; sourceTree = "<group>"; };
+		1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerToDigitArray.swift; sourceTree = "<group>"; };
+		1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSafeIndex.swift; sourceTree = "<group>"; };
 		1B8CBB422C248517000CE849 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B8CBB472C248957000CE849 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		1B8CBB4B2C2493F4000CE849 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
@@ -207,6 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				1B7E313F2C4D9659005CA8A6 /* URLValidator.swift */,
+				1B7E31412C4DC12F005CA8A6 /* CardValidator.swift */,
+				1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift */,
+				1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndex.swift */,
 			);
 			path = DataServices;
 			sourceTree = "<group>";
@@ -413,8 +422,10 @@
 				1B7E31292C4D1F65005CA8A6 /* SampleCards.swift in Sources */,
 				1B7E31402C4D9659005CA8A6 /* URLValidator.swift in Sources */,
 				1BF1A7D62A8E4F7C00663733 /* LocalPassApp.swift in Sources */,
+				1B7E31422C4DC12F005CA8A6 /* CardValidator.swift in Sources */,
 				1B8CBB762C4220E6000CE849 /* FolderContentTypeModel.swift in Sources */,
 				1B7E31302C4D2010005CA8A6 /* SampleLogins.swift in Sources */,
+				1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift in Sources */,
 				1BF44F8F2C432838001E6470 /* EncryptionSettingsModel.swift in Sources */,
 				1B7E31332C4D232D005CA8A6 /* ContentModel.swift in Sources */,
 				1BF44F8D2C43282A001E6470 /* RecycleBinSettingsModel.swift in Sources */,
@@ -430,6 +441,7 @@
 				1B8CBB4F2C3516A7000CE849 /* CardModel.swift in Sources */,
 				1B8CBB532C351C71000CE849 /* DocumentModel.swift in Sources */,
 				1B7E31232C4D1F0F005CA8A6 /* SampleUserData.swift in Sources */,
+				1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndex.swift in Sources */,
 				1B7E31362C4D261E005CA8A6 /* SupportingContentModel.swift in Sources */,
 				1B8CBB742C4220C4000CE849 /* FolderContentModel.swift in Sources */,
 				1B7E313C2C4D5B6A005CA8A6 /* SampleUsernames.swift in Sources */,
