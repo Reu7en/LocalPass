@@ -1,5 +1,5 @@
 //
-//  EmailModel.swift
+//  UsernameModel.swift
 //  LocalPass
 //
 //  Created by Reuben on 08/07/2024.
@@ -7,21 +7,21 @@
 
 import Foundation
 
-struct Email: Equatable, Codable {
-    var address: String
+struct Username: SupportingContent {
+    var name: String
     var updatedDate: Date?
     var markedForDeletionDate: Date?
     
     let creationDate: Date
     
-    static func == (lhs: Email, rhs: Email) -> Bool {
-        lhs.address == rhs.address
+    static func == (lhs: Username, rhs: Username) -> Bool {
+        lhs.name == rhs.name
     }
     
     init(
-        address: String
+        name: String
     ) {
-        self.address = address
+        self.name = name
         self.updatedDate = nil
         self.markedForDeletionDate = nil
         

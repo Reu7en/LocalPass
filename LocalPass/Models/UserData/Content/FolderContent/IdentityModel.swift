@@ -59,7 +59,7 @@ struct Identity: FolderContent {
     }
 }
 
-enum Title: CaseIterable, Codable {
+enum Title: CaseIterable, Equatable, Codable {
     case Mr
     case Mrs
     case Miss

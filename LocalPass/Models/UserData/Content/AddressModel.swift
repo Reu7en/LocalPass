@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Address: FolderContent {
+struct Address: Content {
     var name: String?
     var address1: String?
     var address2: String?

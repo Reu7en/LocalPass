@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Document: FolderContent {
+struct Document: Content {
     var name: String?
     var number: String?
-    var expirationMonth: String?
-    var expirationYear: String?
+    var expirationMonth: Int?
+    var expirationYear: Int?
     var updatedDate: Date?
     var markedForDeletionDate: Date?
     var starred: Bool
@@ -22,8 +22,8 @@ struct Document: FolderContent {
     init(
         name: String? = nil,
         number: String? = nil,
-        expirationMonth: String? = nil,
-        expirationYear: String? = nil
+        expirationMonth: Int? = nil,
+        expirationYear: Int? = nil
     ) {
         self.name = name
         self.number = number

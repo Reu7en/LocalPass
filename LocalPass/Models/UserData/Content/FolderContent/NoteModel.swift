@@ -8,20 +8,20 @@
 import Foundation
 
 struct Note: FolderContent {
-    var title: String?
+    var name: String?
     var bodies: [String]?
-    let creationDate: Date
+    var updatedDate: Date?
     var markedForDeletionDate: Date?
     var starred: Bool
     
-    var updatedDate: Date?
+    let creationDate: Date
     let id: UUID
     
     init(
-        title: String? = nil,
+        name: String? = nil,
         bodies: [String]? = nil
     ) {
-        self.title = title
+        self.name = name
         self.bodies = bodies
         self.updatedDate = nil
         self.markedForDeletionDate = nil

@@ -10,7 +10,7 @@ import Foundation
 struct Card: FolderContent {
     var name: String?
     var holder: String?
-    var number: String?
+    var number: Int64?
     var expirationMonth: Int?
     var expirationYear: Int?
     var securityCode: Int?
@@ -26,7 +26,7 @@ struct Card: FolderContent {
     init(
         name: String? = nil,
         holder: String? = nil,
-        number: String? = nil,
+        number: Int64? = nil,
         expirationMonth: Int? = nil,
         expirationYear: Int? = nil,
         securityCode: Int? = nil,

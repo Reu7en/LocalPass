@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Login: FolderContent {
+struct Login: Content {
     var name: String?
     var username: Username?
     var password: String?
     var urls: [URL]?
-    var otpKey: String?
+    var totpKey: String?
     var backupCodes: [String]?
     var notes: [String]?
     var showInAutofill: Bool
@@ -28,8 +28,8 @@ struct Login: FolderContent {
         name: String? = nil,
         username: Username? = nil,
         password: String? = nil, 
-        urls: [URL]? = nil,
-        otpKey: String? = nil,
+        urlStrings: [String]? = nil,
+        totpKey: String? = nil,
         backupCodes: [String]? = nil,
         notes: [String]? = nil,
         showInAutofill: Bool = false
@@ -37,8 +37,8 @@ struct Login: FolderContent {
         self.name = name
         self.username = username
         self.password = password
-        self.urls = urls
-        self.otpKey = otpKey
+        self.urls = urlStrings?.compactMap { URLValidator.validate(urlString: $0) }
+        self.totpKey = totpKey
         self.backupCodes = backupCodes
         self.notes = notes
         self.showInAutofill = showInAutofill
