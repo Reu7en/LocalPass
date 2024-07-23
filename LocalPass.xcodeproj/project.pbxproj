@@ -24,6 +24,10 @@
 		1B7E31422C4DC12F005CA8A6 /* CardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31412C4DC12F005CA8A6 /* CardValidator.swift */; };
 		1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift */; };
 		1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndex.swift */; };
+		1B7E31482C4E632D005CA8A6 /* PasswordEntropy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31472C4E632D005CA8A6 /* PasswordEntropy.swift */; };
+		1B7E314A2C4EBA20005CA8A6 /* JSONSerialisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31492C4EBA20005CA8A6 /* JSONSerialisation.swift */; };
+		1B7E314C2C4EBAFF005CA8A6 /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E314B2C4EBAFF005CA8A6 /* KeyDerivation.swift */; };
+		1B7E31502C4F2F06005CA8A6 /* EncryptedUserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E314F2C4F2F06005CA8A6 /* EncryptedUserDataModel.swift */; };
 		1B8CBB432C248517000CE849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CBB422C248517000CE849 /* LaunchScreen.storyboard */; };
 		1B8CBB482C248957000CE849 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CBB472C248957000CE849 /* LoginModel.swift */; };
 		1B8CBB4C2C2493F4000CE849 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CBB4B2C2493F4000CE849 /* NoteModel.swift */; };
@@ -45,7 +49,7 @@
 		1BF1A7DD2A8E4F7D00663733 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1A7DC2A8E4F7D00663733 /* Preview Assets.xcassets */; };
 		1BF44F8B2C43281E001E6470 /* SuggestionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F8A2C43281E001E6470 /* SuggestionSettingsModel.swift */; };
 		1BF44F8D2C43282A001E6470 /* RecycleBinSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F8C2C43282A001E6470 /* RecycleBinSettingsModel.swift */; };
-		1BF44F8F2C432838001E6470 /* EncryptionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F8E2C432838001E6470 /* EncryptionSettingsModel.swift */; };
+		1BF44F8F2C432838001E6470 /* KeyDerivationSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F8E2C432838001E6470 /* KeyDerivationSettingsModel.swift */; };
 		1BF44F912C432846001E6470 /* HomeViewSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F902C432846001E6470 /* HomeViewSettingsModel.swift */; };
 		1BF44F932C4B2800001E6470 /* BiometricSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F922C4B2800001E6470 /* BiometricSettingsModel.swift */; };
 		1BF44F982C4B4179001E6470 /* PermissionSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF44F972C4B4179001E6470 /* PermissionSettingsModel.swift */; };
@@ -82,6 +86,10 @@
 		1B7E31412C4DC12F005CA8A6 /* CardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidator.swift; sourceTree = "<group>"; };
 		1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerToDigitArray.swift; sourceTree = "<group>"; };
 		1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSafeIndex.swift; sourceTree = "<group>"; };
+		1B7E31472C4E632D005CA8A6 /* PasswordEntropy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntropy.swift; sourceTree = "<group>"; };
+		1B7E31492C4EBA20005CA8A6 /* JSONSerialisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerialisation.swift; sourceTree = "<group>"; };
+		1B7E314B2C4EBAFF005CA8A6 /* KeyDerivation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDerivation.swift; sourceTree = "<group>"; };
+		1B7E314F2C4F2F06005CA8A6 /* EncryptedUserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedUserDataModel.swift; sourceTree = "<group>"; };
 		1B8CBB422C248517000CE849 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B8CBB472C248957000CE849 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		1B8CBB4B2C2493F4000CE849 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
@@ -106,7 +114,7 @@
 		1BF1A7DC2A8E4F7D00663733 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BF44F8A2C43281E001E6470 /* SuggestionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionSettingsModel.swift; sourceTree = "<group>"; };
 		1BF44F8C2C43282A001E6470 /* RecycleBinSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleBinSettingsModel.swift; sourceTree = "<group>"; };
-		1BF44F8E2C432838001E6470 /* EncryptionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionSettingsModel.swift; sourceTree = "<group>"; };
+		1BF44F8E2C432838001E6470 /* KeyDerivationSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDerivationSettingsModel.swift; sourceTree = "<group>"; };
 		1BF44F902C432846001E6470 /* HomeViewSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSettingsModel.swift; sourceTree = "<group>"; };
 		1BF44F922C4B2800001E6470 /* BiometricSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricSettingsModel.swift; sourceTree = "<group>"; };
 		1BF44F972C4B4179001E6470 /* PermissionSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionSettingsModel.swift; sourceTree = "<group>"; };
@@ -192,6 +200,22 @@
 			path = FolderContent;
 			sourceTree = "<group>";
 		};
+		1B7E314D2C4F20C8005CA8A6 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				1B7E314B2C4EBAFF005CA8A6 /* KeyDerivation.swift */,
+			);
+			path = Cryptography;
+			sourceTree = "<group>";
+		};
+		1B7E314E2C4F2B5E005CA8A6 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				1BF44F8E2C432838001E6470 /* KeyDerivationSettingsModel.swift */,
+			);
+			path = Cryptography;
+			sourceTree = "<group>";
+		};
 		1B8CBB442C2485C6000CE849 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +236,13 @@
 		1B8CBB462C2485D3000CE849 /* DataServices */ = {
 			isa = PBXGroup;
 			children = (
+				1B7E314D2C4F20C8005CA8A6 /* Cryptography */,
 				1B7E313F2C4D9659005CA8A6 /* URLValidator.swift */,
 				1B7E31412C4DC12F005CA8A6 /* CardValidator.swift */,
 				1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift */,
 				1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndex.swift */,
+				1B7E31472C4E632D005CA8A6 /* PasswordEntropy.swift */,
+				1B7E31492C4EBA20005CA8A6 /* JSONSerialisation.swift */,
 			);
 			path = DataServices;
 			sourceTree = "<group>";
@@ -240,7 +267,7 @@
 		1B8CBB782C4221AC000CE849 /* UserSettings */ = {
 			isa = PBXGroup;
 			children = (
-				1BF44F882C4327E4001E6470 /* Supporting */,
+				1BF44F882C4327E4001E6470 /* SupportingSettings */,
 				1B8CBB712C421B13000CE849 /* SettingModel.swift */,
 				1B8CBB5A2C3C8BEB000CE849 /* UserSettingsModel.swift */,
 			);
@@ -250,6 +277,7 @@
 		1B8CBB792C4221CE000CE849 /* UserData */ = {
 			isa = PBXGroup;
 			children = (
+				1B7E314F2C4F2F06005CA8A6 /* EncryptedUserDataModel.swift */,
 				1B8CBB6F2C421623000CE849 /* UserDataModel.swift */,
 				1B7E31322C4D232D005CA8A6 /* ContentModel.swift */,
 				1B7E31352C4D261E005CA8A6 /* SupportingContentModel.swift */,
@@ -321,17 +349,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1BF44F882C4327E4001E6470 /* Supporting */ = {
+		1BF44F882C4327E4001E6470 /* SupportingSettings */ = {
 			isa = PBXGroup;
 			children = (
+				1B7E314E2C4F2B5E005CA8A6 /* Cryptography */,
 				1BF44F8A2C43281E001E6470 /* SuggestionSettingsModel.swift */,
 				1BF44F8C2C43282A001E6470 /* RecycleBinSettingsModel.swift */,
-				1BF44F8E2C432838001E6470 /* EncryptionSettingsModel.swift */,
 				1BF44F902C432846001E6470 /* HomeViewSettingsModel.swift */,
 				1BF44F922C4B2800001E6470 /* BiometricSettingsModel.swift */,
 				1BF44F972C4B4179001E6470 /* PermissionSettingsModel.swift */,
 			);
-			path = Supporting;
+			path = SupportingSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,9 +443,11 @@
 				1B8CBB5B2C3C8BEB000CE849 /* UserSettingsModel.swift in Sources */,
 				1BF44F932C4B2800001E6470 /* BiometricSettingsModel.swift in Sources */,
 				1B8CBB482C248957000CE849 /* LoginModel.swift in Sources */,
+				1B7E31502C4F2F06005CA8A6 /* EncryptedUserDataModel.swift in Sources */,
 				1B8CBB612C3DCE47000CE849 /* FolderModel.swift in Sources */,
 				1BF44F912C432846001E6470 /* HomeViewSettingsModel.swift in Sources */,
 				1B7E31272C4D1F5D005CA8A6 /* SampleNotes.swift in Sources */,
+				1B7E31482C4E632D005CA8A6 /* PasswordEntropy.swift in Sources */,
 				1B7E31252C4D1F53005CA8A6 /* SampleAccounts.swift in Sources */,
 				1B7E31292C4D1F65005CA8A6 /* SampleCards.swift in Sources */,
 				1B7E31402C4D9659005CA8A6 /* URLValidator.swift in Sources */,
@@ -426,12 +456,13 @@
 				1B8CBB762C4220E6000CE849 /* FolderContentTypeModel.swift in Sources */,
 				1B7E31302C4D2010005CA8A6 /* SampleLogins.swift in Sources */,
 				1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArray.swift in Sources */,
-				1BF44F8F2C432838001E6470 /* EncryptionSettingsModel.swift in Sources */,
+				1BF44F8F2C432838001E6470 /* KeyDerivationSettingsModel.swift in Sources */,
 				1B7E31332C4D232D005CA8A6 /* ContentModel.swift in Sources */,
 				1BF44F8D2C43282A001E6470 /* RecycleBinSettingsModel.swift in Sources */,
 				1B8CBB552C351D19000CE849 /* AddressModel.swift in Sources */,
 				1B8CBB592C3C86F0000CE849 /* AccountModel.swift in Sources */,
 				1B8CBB5D2C3C8CCB000CE849 /* UsernameModel.swift in Sources */,
+				1B7E314C2C4EBAFF005CA8A6 /* KeyDerivation.swift in Sources */,
 				1BF44F982C4B4179001E6470 /* PermissionSettingsModel.swift in Sources */,
 				1B8CBB512C3519AA000CE849 /* IdentityModel.swift in Sources */,
 				1B7E312B2C4D1F6C005CA8A6 /* SampleIdentities.swift in Sources */,
@@ -440,6 +471,7 @@
 				1BF44F8B2C43281E001E6470 /* SuggestionSettingsModel.swift in Sources */,
 				1B8CBB4F2C3516A7000CE849 /* CardModel.swift in Sources */,
 				1B8CBB532C351C71000CE849 /* DocumentModel.swift in Sources */,
+				1B7E314A2C4EBA20005CA8A6 /* JSONSerialisation.swift in Sources */,
 				1B7E31232C4D1F0F005CA8A6 /* SampleUserData.swift in Sources */,
 				1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndex.swift in Sources */,
 				1B7E31362C4D261E005CA8A6 /* SupportingContentModel.swift in Sources */,

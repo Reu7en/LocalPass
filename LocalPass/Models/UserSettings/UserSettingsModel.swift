@@ -14,7 +14,7 @@ import Foundation
 struct UserSettings: Identifiable, Codable {
     var suggestionSettings: SuggestionSettings
     var recycleBinSettings: RecycleBinSettings
-    var encryptionSettings: EncryptionSettings
+    var cryptographySettings: KeyDerivationSettings
     var homeViewSettings: HomeViewSettings
     var biometricSettings: BiometricSettings
     var permissionSettings: PermissionSettings
@@ -26,7 +26,7 @@ struct UserSettings: Identifiable, Codable {
     init() {
         self.suggestionSettings = SuggestionSettings()
         self.recycleBinSettings = RecycleBinSettings()
-        self.encryptionSettings = EncryptionSettings()
+        self.cryptographySettings = KeyDerivationSettings()
         self.homeViewSettings = HomeViewSettings()
         self.biometricSettings = BiometricSettings()
         self.permissionSettings = PermissionSettings()
