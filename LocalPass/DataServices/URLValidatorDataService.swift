@@ -1,5 +1,5 @@
 //
-//  URLValidator.swift
+//  URLValidatorDataService.swift
 //  LocalPass
 //
 //  Created by Reuben on 21/07/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct URLValidator {
+struct URLValidatorDataService {
     static func validate(urlString: String) -> URL? {
         guard !urlString.isEmpty else { return nil }
         guard let url = URL(string: urlString) else { return nil }

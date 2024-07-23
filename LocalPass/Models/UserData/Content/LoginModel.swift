@@ -37,7 +37,7 @@ struct Login: Content {
         self.name = name
         self.username = username
         self.password = password
-        self.urls = urlStrings?.compactMap { URLValidator.validate(urlString: $0) }
+        self.urls = urlStrings?.compactMap { URLValidatorDataService.validate(urlString: $0) }
         self.totpKey = totpKey
         self.backupCodes = backupCodes
         self.notes = notes

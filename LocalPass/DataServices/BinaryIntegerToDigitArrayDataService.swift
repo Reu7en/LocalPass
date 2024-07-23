@@ -1,5 +1,5 @@
 //
-//  BinaryIntegerToDigitArray.swift
+//  BinaryIntegerToDigitArrayDataService.swift
 //  LocalPass
 //
 //  Created by Reuben on 21/07/2024.

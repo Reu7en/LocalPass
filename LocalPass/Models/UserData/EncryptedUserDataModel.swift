@@ -10,18 +10,21 @@ import Foundation
 struct EncryptedUserData: Identifiable, Codable {
     let blob: Data
     let salt: Data
-    let keyDerivationSettings: KeyDerivationSettings
+    let iterations: UInt32
+    let keyDerivationAlgorithm: KeyDerivationAlgorithm
     let id: UUID
     
     init(
         blob: Data,
         salt: Data,
-        keyDerivationSettings: KeyDerivationSettings,
+        iterations: UInt32,
+        keyDerivationAlgorithm: KeyDerivationAlgorithm,
         id: UUID
     ) {
         self.blob = blob
         self.salt = salt
-        self.keyDerivationSettings = keyDerivationSettings
+        self.iterations = iterations
+        self.keyDerivationAlgorithm = keyDerivationAlgorithm
         self.id = id
     }
 }

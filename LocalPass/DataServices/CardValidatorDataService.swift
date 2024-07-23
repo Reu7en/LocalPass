@@ -1,5 +1,5 @@
 //
-//  CardValidator.swift
+//  CardValidatorDataService.swift
 //  LocalPass
 //
 //  Created by Reuben on 21/07/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CardValidator {
+struct CardValidatorDataService {
     static func validate(cardNumber: Int64) -> CardType? {
         guard isValidLuhnNumber(cardNumber) else {
             return nil

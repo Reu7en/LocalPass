@@ -1,5 +1,5 @@
 //
-//  PasswordEntropy.swift
+//  PasswordEntropyDataService.swift
 //  LocalPass
 //
 //  Created by Reuben on 22/07/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PasswordEntropy {
+struct PasswordEntropyDataService {
     static func calculateEntropy(of password: String) -> Double {
         guard !password.isEmpty else {
             return 0.0

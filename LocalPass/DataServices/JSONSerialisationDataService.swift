@@ -1,5 +1,5 @@
 //
-//  JSONSerialisation.swift
+//  JSONSerialisationDataService.swift
 //  LocalPass
 //
 //  Created by Reuben on 22/07/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JSONSerialisation {
+struct JSONSerialisationDataService {
     static func userDataToJSON(_ userData: UserData) -> Data? {
         return try? JSONEncoder().encode(userData)
     }
