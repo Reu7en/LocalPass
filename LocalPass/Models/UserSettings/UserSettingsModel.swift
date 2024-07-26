@@ -9,7 +9,6 @@ import Foundation
 
 /*
  - Biometric preference to be stored in UserDefaults or similar, can be replicated in model for sync
- - Actual iterations used to be stored unencrypted with data blob or similar
  */
 struct UserSettings: Identifiable, Codable {
     var suggestionSettings: SuggestionSettings

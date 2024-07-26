@@ -9,23 +9,23 @@ import Foundation
 
 struct EncryptedFileSettings: Codable {
     var encryptedFileExtension: Setting<EncryptedFileExtension>
-    var encryptedFilename: Setting<EncryptedFilename>
-    var rotateFilenameId: Setting<Bool>
+    var encryptedFilename: Setting<String>
+    var useUUIDAsEncryptedFilename: Setting<Bool>
     
     init() {
         self.encryptedFileExtension = Setting(value: .localPass, minimumAuthenticationRequired: .Minimum)
-        self.encryptedFilename = Setting(value: .id, minimumAuthenticationRequired: .Minimum)
-        self.rotateFilenameId = Setting(value: true, minimumAuthenticationRequired: .Minimum)
+        self.encryptedFilename = Setting(value: "vault_\(UUID().uuidString)", minimumAuthenticationRequired: .Minimum)
+        self.useUUIDAsEncryptedFilename = Setting(value: true, minimumAuthenticationRequired: .Minimum)
     }
 }
 
-enum EncryptedFilename: CaseIterable, Codable {
-    case id
-    case name
-}
-
-enum EncryptedFileExtension: CaseIterable, Codable {
+enum EncryptedFileExtension: String, CaseIterable, Codable {
     case localPass
     case bin
     case txt
+}
+
+enum SaveLocation: CaseIterable, Codable {
+    case local
+    case iCloud
 }

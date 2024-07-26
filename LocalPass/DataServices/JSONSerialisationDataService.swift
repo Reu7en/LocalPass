@@ -15,4 +15,12 @@ struct JSONSerialisationDataService {
     static func JSONToUserData(_ JSONData: Data) -> UserData? {
         return try? JSONDecoder().decode(UserData.self, from: JSONData)
     }
+    
+    static func encryptedUserDataToJSON(_ encryptedUserData: EncryptedUserData) -> Data? {
+        return try? JSONEncoder().encode(encryptedUserData)
+    }
+    
+    static func JSONToEncryptedUserData(_ JSONData: Data) -> EncryptedUserData? {
+        return try? JSONDecoder().decode(EncryptedUserData.self, from: JSONData)
+    }
 }
