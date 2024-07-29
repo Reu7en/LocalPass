@@ -30,7 +30,7 @@ struct Setting<T: Equatable & Codable>: Equatable, Codable {
     }
 }
 
-enum AuthenticationRequired: Codable {
+enum AuthenticationRequired: CaseIterable, Codable {
     case None
     case Minimum
     case Password

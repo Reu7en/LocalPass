@@ -24,8 +24,3 @@ enum EncryptedFileExtension: String, CaseIterable, Codable {
     case bin
     case txt
 }
-
-enum SaveLocation: CaseIterable, Codable {
-    case local
-    case iCloud
-}

@@ -12,13 +12,11 @@ struct HomeViewSettings: Codable {
     var showNotes: Setting<Bool>
     var showCards: Setting<Bool>
     var showIdentities: Setting<Bool>
-    var showDocuments: Setting<Bool>
     
     init() {
         self.showLogins = Setting(value: true, minimumAuthenticationRequired: .None)
         self.showNotes = Setting(value: true, minimumAuthenticationRequired: .None)
         self.showCards = Setting(value: true, minimumAuthenticationRequired: .None)
         self.showIdentities = Setting(value: true, minimumAuthenticationRequired: .None)
-        self.showDocuments = Setting(value: true, minimumAuthenticationRequired: .None)
     }
 }

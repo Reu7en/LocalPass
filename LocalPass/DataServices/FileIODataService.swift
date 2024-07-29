@@ -21,18 +21,22 @@ struct FileIODataService {
         return try? Data(contentsOf: path)
     }
     
-    static func getPath(for saveLocation: SaveLocation) -> URL? {
-        let fileManager = FileManager.default
-        
-        switch saveLocation {
-        case .local:
-            return fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
-        case .iCloud:
-            return fileManager.url(forUbiquityContainerIdentifier: iCloudContainerIdentifier)?.appendingPathComponent("LocalPass")
-        }
+    static func delete(at path: URL) -> Bool {
+        return (try? FileManager.default.removeItem(at: path)) != nil
     }
     
-    static func delete(at path: URL) {
-        
+    static func getPath(for saveLocation: SaveLocation) -> URL? {
+        switch saveLocation {
+        case .local:
+            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        case .iCloud:
+            return FileManager.default.url(forUbiquityContainerIdentifier: iCloudContainerIdentifier)?.appendingPathComponent("LocalPass")
+        }
     }
+
+}
+
+enum SaveLocation: CaseIterable, Codable {
+    case local
+    case iCloud
 }
