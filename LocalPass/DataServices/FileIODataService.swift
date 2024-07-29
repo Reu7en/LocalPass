@@ -8,7 +8,7 @@
 import Foundation
 
 struct FileIODataService {
-    private static let iCloudContainerIdentifier = "iCloud.com.reuben.localpass"
+    private static let iCloudContainerIdentifier = "iCloud.com.reuben.LocalPass"
     
     static func save(_ data: Data, to path: URL, with settings: EncryptedFileSettings) -> Bool {
         let filename = settings.useUUIDAsEncryptedFilename.value ? UUID().uuidString : settings.encryptedFilename.value
@@ -30,7 +30,7 @@ struct FileIODataService {
         case .local:
             return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         case .iCloud:
-            return FileManager.default.url(forUbiquityContainerIdentifier: iCloudContainerIdentifier)?.appendingPathComponent("LocalPass")
+            return FileManager.default.url(forUbiquityContainerIdentifier: iCloudContainerIdentifier)
         }
     }
 
