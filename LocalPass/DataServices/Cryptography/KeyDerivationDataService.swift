@@ -32,7 +32,7 @@ struct KeyDerivationDataService {
         case .PBKDF2sha512:
             return PBKDF2sha512(password, salt, iterations)
         }
-    }
+    } 
     
     private static func generateSalt(length: Int) -> Data? {
         var salt = [UInt8](repeating: 0, count: length)
@@ -85,7 +85,7 @@ struct KeyDerivationDataService {
     }
     
     private static func PBKDF2sha256(_ password: String, _ salt: Data, _ iterations: UInt32) -> SymmetricKey? {
-        var key = Data(repeating: 0, count: SHA256Digest.byteCount)
+        var key = Data(repeating: 0, count: kCCKeySizeAES256)
         
         let result = key.withUnsafeMutableBytes { keyBytes in
             salt.withUnsafeBytes { saltBytes in
@@ -111,7 +111,7 @@ struct KeyDerivationDataService {
     }
     
     private static func PBKDF2sha512(_ password: String, _ salt: Data, _ iterations: UInt32) -> SymmetricKey? {
-        var key = [UInt8](repeating: 0, count: SHA512Digest.byteCount)
+        var key = [UInt8](repeating: 0, count: kCCKeySizeAES256)
         
         let result = key.withUnsafeMutableBytes { keyBytes in
             salt.withUnsafeBytes { saltBytes in

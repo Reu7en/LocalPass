@@ -10,6 +10,8 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         ScrollView {
+            Image(systemName: "key.horizontal.fill")
+            
             Text("Encrypted User Data:\n")
             
             Text("Bin:\n")
@@ -18,15 +20,23 @@ struct RootView: View {
             
             Text("Salt:\n")
             
-            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.salt))\n")
+            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.keyMetaData.salt))\n")
             
             Text("Iterations:\n")
             
-            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.iterations))\n")
+            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.keyMetaData.iterations))\n")
             
             Text("Key Derivation Algorithm:\n")
             
-            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.keyDerivationAlgorithm))\n")
+            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.keyMetaData.keyDerivationAlgorithm))\n")
+            
+            Text("Encryption Algorithm:\n")
+            
+            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.encryptionMetaData.encryptionAlgorithm))\n")
+            
+            Text("Round:\n")
+            
+            Text("\(String(describing: SampleEncryptedUserData.sampleEncryptedUserData.encryptionMetaData.round))\n")
             
             Text("ID:\n")
             
