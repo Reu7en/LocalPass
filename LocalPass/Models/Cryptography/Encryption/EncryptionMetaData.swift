@@ -10,4 +10,12 @@ import Foundation
 struct EncryptionMetaData: Codable {
     let encryptionAlgorithm: EncryptionAlgorithm
     let round: Int
+    
+    init(
+        encryptionAlgorithm: EncryptionAlgorithm,
+        round: Int
+    ) {
+        self.encryptionAlgorithm = encryptionAlgorithm
+        self.round = round
+    }
 }

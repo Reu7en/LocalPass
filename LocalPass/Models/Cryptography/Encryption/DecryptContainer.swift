@@ -10,4 +10,12 @@ import Foundation
 struct DecryptContainer {
     let userData: UserData
     let keys: [AssociatedKeyContainer]
+    
+    init(
+        userData: UserData,
+        keys: [AssociatedKeyContainer]
+    ) {
+        self.userData = userData
+        self.keys = keys
+    }
 }

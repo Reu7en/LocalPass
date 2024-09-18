@@ -302,8 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7E314D2C4F20C8005CA8A6 /* Cryptography */,
-				1B7E313F2C4D9659005CA8A6 /* URLValidatorDataService.swift */,
-				1B7E31412C4DC12F005CA8A6 /* CardValidatorDataService.swift */,
+				1BC8F7712C9B7461003F2E22 /* Validation */,
 				1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArrayDataService.swift */,
 				1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndexDataService.swift */,
 				1B7E31472C4E632D005CA8A6 /* PasswordEntropyDataService.swift */,
@@ -389,11 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				1BC8F73F2C73E844003F2E22 /* Encryption */,
-				1BC8F7352C73E740003F2E22 /* AssociatedKeyContainer.swift */,
-				1BC8F7372C73E770003F2E22 /* KeyContainer.swift */,
-				1BC8F7392C73E79C003F2E22 /* KeyMetaData.swift */,
-				1BC8F73B2C73E7B4003F2E22 /* EncryptionMetaData.swift */,
-				1BC8F73D2C73E7D5003F2E22 /* DecryptContainer.swift */,
+				1BC8F7722C9B76DB003F2E22 /* KeyHandling */,
 			);
 			path = Cryptography;
 			sourceTree = "<group>";
@@ -403,6 +398,8 @@
 			children = (
 				1BC8F7402C73E84F003F2E22 /* EncryptionAlgorithm.swift */,
 				1BC8F7452C73E8BC003F2E22 /* EncryptedFileExtension.swift */,
+				1BC8F73B2C73E7B4003F2E22 /* EncryptionMetaData.swift */,
+				1BC8F73D2C73E7D5003F2E22 /* DecryptContainer.swift */,
 			);
 			path = Encryption;
 			sourceTree = "<group>";
@@ -413,6 +410,25 @@
 				1BC8F7432C73E895003F2E22 /* AuthenticationRequired.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		1BC8F7712C9B7461003F2E22 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				1B7E31412C4DC12F005CA8A6 /* CardValidatorDataService.swift */,
+				1B7E313F2C4D9659005CA8A6 /* URLValidatorDataService.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		1BC8F7722C9B76DB003F2E22 /* KeyHandling */ = {
+			isa = PBXGroup;
+			children = (
+				1BC8F7372C73E770003F2E22 /* KeyContainer.swift */,
+				1BC8F7352C73E740003F2E22 /* AssociatedKeyContainer.swift */,
+				1BC8F7392C73E79C003F2E22 /* KeyMetaData.swift */,
+			);
+			path = KeyHandling;
 			sourceTree = "<group>";
 		};
 		1BF1A7C92A8E4F7C00663733 = {

@@ -12,8 +12,11 @@ struct AssociatedKeyContainer {
     let keyContainer: KeyContainer
     let keychainTag: String
     
-    init(keyContainer: KeyContainer, keychainTag: String) {
-        let nilKeyContainer = KeyContainer(key: nil, keyMetaData: keyContainer.keyMetaData, encryptionMetaData: keyContainer.encryptionMetaData)
+    init(
+        keyContainer: KeyContainer,
+        keychainTag: String
+    ) {
+        let nilKeyContainer = KeyContainer(keyMetaData: keyContainer.keyMetaData, encryptionMetaData: keyContainer.encryptionMetaData)
         
         self.keyContainer = nilKeyContainer
         self.keychainTag = keychainTag

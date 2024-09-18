@@ -10,6 +10,8 @@ import CryptoKit
 
 struct EncryptionDataService {
     func encrypt(_ userData: UserData, with keyContainers: [KeyContainer], using encryptionSettings: EncryptionSettings) -> EncryptedUserData? {
+        if encryptionSettings.numberOfRounds.value < 1 || encryptionSettings.encryptionAlgorithms.value.isEmpty { return nil }
+        
         guard var bin = JSONSerialisationDataService.userDataToJSON(userData) else { return nil }
         
         for round in 0..<encryptionSettings.numberOfRounds.value {
@@ -37,16 +39,17 @@ struct EncryptionDataService {
         return JSONSerialisationDataService.JSONToEncryptedUserData(bin)
     }
     
-    // del all keys in keychain if successful
-    // save all keys, keys do not leave scope
-    func decrypt(_ encryptedUserData: EncryptedUserData, with password: String, using keyDerivationSettings: KeyDerivationSettings) -> UserData? {
+    func decrypt(_ encryptedUserData: EncryptedUserData, with password: String) -> DecryptContainer? {
         guard var bin = JSONSerialisationDataService.encryptedUserDataToJSON(encryptedUserData) else { return nil }
+        
         var x = 0
+        var keyContainers: [AssociatedKeyContainer] = []
         
         while x < EncryptionSettings.maxDepth {
             if let encryptedUserData = JSONSerialisationDataService.JSONToEncryptedUserData(bin) {
-                let keyMetaData = encryptedUserData.keyMetaData
-                guard let key = KeyDerivationDataService.deriveKey(from: password, salt: keyMetaData.salt, iterations: keyMetaData.iterations, with: keyMetaData.keyDerivationAlgorithm) else { return nil }
+                guard let key = KeyDerivationDataService.deriveKey(from: password, salt: encryptedUserData.keyMetaData.salt, iterations: encryptedUserData.keyMetaData.iterations, with: encryptedUserData.keyMetaData.keyDerivationAlgorithm) else { return nil }
+                
+                keyContainers.append(AssociatedKeyContainer(keyContainer: KeyContainer(keyMetaData: encryptedUserData.keyMetaData, encryptionMetaData: encryptedUserData.encryptionMetaData), keychainTag: UUID().uuidString))
                 
                 switch encryptedUserData.encryptionMetaData.encryptionAlgorithm {
                 case .AESGCM:
@@ -57,7 +60,7 @@ struct EncryptionDataService {
                     bin = openedBox
                 }
             } else if let userData = JSONSerialisationDataService.JSONToUserData(bin) {
-                return userData
+                return DecryptContainer(userData: userData, keys: keyContainers)
             } else {
                 return nil
             }
