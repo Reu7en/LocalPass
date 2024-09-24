@@ -12,6 +12,7 @@ struct UserData: Identifiable, Codable {
     var notes: Folder<Note>?
     var cards: Folder<Card>?
     var identities: Folder<Identity>?
+    var themes: [Theme]?
     var userSettings: UserSettings
     
     let id: UUID
@@ -21,6 +22,7 @@ struct UserData: Identifiable, Codable {
         self.notes = nil
         self.cards = nil
         self.identities = nil
+        self.themes = nil
         
         self.userSettings = UserSettings()
         self.id = UUID()

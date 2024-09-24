@@ -22,8 +22,8 @@
 		1B7E313E2C4D5B79005CA8A6 /* SampleAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E313D2C4D5B79005CA8A6 /* SampleAddresses.swift */; };
 		1B7E31402C4D9659005CA8A6 /* URLValidatorDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E313F2C4D9659005CA8A6 /* URLValidatorDataService.swift */; };
 		1B7E31422C4DC12F005CA8A6 /* CardValidatorDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31412C4DC12F005CA8A6 /* CardValidatorDataService.swift */; };
-		1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArrayDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArrayDataService.swift */; };
-		1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndexDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndexDataService.swift */; };
+		1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArrayExtension.swift */; };
+		1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndexExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndexExtension.swift */; };
 		1B7E31482C4E632D005CA8A6 /* PasswordEntropyDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31472C4E632D005CA8A6 /* PasswordEntropyDataService.swift */; };
 		1B7E314A2C4EBA20005CA8A6 /* JSONSerialisationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E31492C4EBA20005CA8A6 /* JSONSerialisationDataService.swift */; };
 		1B7E314C2C4EBAFF005CA8A6 /* KeyDerivationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E314B2C4EBAFF005CA8A6 /* KeyDerivationDataService.swift */; };
@@ -67,6 +67,14 @@
 		1BC8F7412C73E850003F2E22 /* EncryptionAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7402C73E84F003F2E22 /* EncryptionAlgorithm.swift */; };
 		1BC8F7442C73E895003F2E22 /* AuthenticationRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7432C73E895003F2E22 /* AuthenticationRequired.swift */; };
 		1BC8F7462C73E8BC003F2E22 /* EncryptedFileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7452C73E8BC003F2E22 /* EncryptedFileExtension.swift */; };
+		1BC8F7742C9F0C73003F2E22 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7732C9F0C73003F2E22 /* HomeView.swift */; };
+		1BC8F7762C9F0D00003F2E22 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7752C9F0D00003F2E22 /* HomeViewModel.swift */; };
+		1BC8F7792C9F0E71003F2E22 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7782C9F0E71003F2E22 /* HomeTabView.swift */; };
+		1BC8F77B2C9F0E87003F2E22 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F77A2C9F0E87003F2E22 /* HomeTabViewModel.swift */; };
+		1BC8F77E2C9F9023003F2E22 /* DeviceInformationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F77D2C9F9023003F2E22 /* DeviceInformationDataService.swift */; };
+		1BC8F7812CA33FE5003F2E22 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7802CA33FE5003F2E22 /* Theme.swift */; };
+		1BC8F7852CA35162003F2E22 /* CodableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7842CA35162003F2E22 /* CodableColor.swift */; };
+		1BC8F7872CA35E44003F2E22 /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8F7862CA35E44003F2E22 /* ThemeSettings.swift */; };
 		1BF1A7D62A8E4F7C00663733 /* LocalPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1A7D52A8E4F7C00663733 /* LocalPassApp.swift */; };
 		1BF1A7DA2A8E4F7D00663733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1A7D92A8E4F7D00663733 /* Assets.xcassets */; };
 		1BF1A7DD2A8E4F7D00663733 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1A7DC2A8E4F7D00663733 /* Preview Assets.xcassets */; };
@@ -107,8 +115,8 @@
 		1B7E313D2C4D5B79005CA8A6 /* SampleAddresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAddresses.swift; sourceTree = "<group>"; };
 		1B7E313F2C4D9659005CA8A6 /* URLValidatorDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidatorDataService.swift; sourceTree = "<group>"; };
 		1B7E31412C4DC12F005CA8A6 /* CardValidatorDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidatorDataService.swift; sourceTree = "<group>"; };
-		1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArrayDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerToDigitArrayDataService.swift; sourceTree = "<group>"; };
-		1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndexDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSafeIndexDataService.swift; sourceTree = "<group>"; };
+		1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerToDigitArrayExtension.swift; sourceTree = "<group>"; };
+		1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndexExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSafeIndexExtension.swift; sourceTree = "<group>"; };
 		1B7E31472C4E632D005CA8A6 /* PasswordEntropyDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEntropyDataService.swift; sourceTree = "<group>"; };
 		1B7E31492C4EBA20005CA8A6 /* JSONSerialisationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerialisationDataService.swift; sourceTree = "<group>"; };
 		1B7E314B2C4EBAFF005CA8A6 /* KeyDerivationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDerivationDataService.swift; sourceTree = "<group>"; };
@@ -152,6 +160,14 @@
 		1BC8F7402C73E84F003F2E22 /* EncryptionAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionAlgorithm.swift; sourceTree = "<group>"; };
 		1BC8F7432C73E895003F2E22 /* AuthenticationRequired.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequired.swift; sourceTree = "<group>"; };
 		1BC8F7452C73E8BC003F2E22 /* EncryptedFileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedFileExtension.swift; sourceTree = "<group>"; };
+		1BC8F7732C9F0C73003F2E22 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1BC8F7752C9F0D00003F2E22 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1BC8F7782C9F0E71003F2E22 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		1BC8F77A2C9F0E87003F2E22 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
+		1BC8F77D2C9F9023003F2E22 /* DeviceInformationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInformationDataService.swift; sourceTree = "<group>"; };
+		1BC8F7802CA33FE5003F2E22 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1BC8F7842CA35162003F2E22 /* CodableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableColor.swift; sourceTree = "<group>"; };
+		1BC8F7862CA35E44003F2E22 /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
 		1BCA01772AA7B42500CB5889 /* LocalPass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocalPass.entitlements; sourceTree = "<group>"; };
 		1BCA017C2AA7BC8D00CB5889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BF1A7D22A8E4F7C00663733 /* LocalPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +196,7 @@
 		1B1028D12C2480F60088A405 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1BC8F7772C9F0DF5003F2E22 /* Home */,
 				1B8CBB4D2C2586A7000CE849 /* Styles */,
 				1B1028D22C2481170088A405 /* RootView.swift */,
 				1BC8F7322C70FAA0003F2E22 /* LogoTestView.swift */,
@@ -282,6 +299,8 @@
 		1B8CBB442C2485C6000CE849 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1BC8F7752C9F0D00003F2E22 /* HomeViewModel.swift */,
+				1BC8F77A2C9F0E87003F2E22 /* HomeTabViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -303,13 +322,12 @@
 			children = (
 				1B7E314D2C4F20C8005CA8A6 /* Cryptography */,
 				1BC8F7712C9B7461003F2E22 /* Validation */,
-				1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArrayDataService.swift */,
-				1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndexDataService.swift */,
 				1B7E31472C4E632D005CA8A6 /* PasswordEntropyDataService.swift */,
 				1B7E31492C4EBA20005CA8A6 /* JSONSerialisationDataService.swift */,
 				1B7E31552C506D47005CA8A6 /* ExecutionTimeDataService.swift */,
 				1B7E31592C5199A9005CA8A6 /* FileIODataService.swift */,
 				1BC8F7302C6AB005003F2E22 /* AuthenticationDataService.swift */,
+				1BC8F77D2C9F9023003F2E22 /* DeviceInformationDataService.swift */,
 			);
 			path = DataServices;
 			sourceTree = "<group>";
@@ -349,6 +367,7 @@
 				1B7E31322C4D232D005CA8A6 /* Content.swift */,
 				1B7E31352C4D261E005CA8A6 /* SupportingContent.swift */,
 				1B8CBB7A2C4221EE000CE849 /* Content */,
+				1BC8F77F2CA33C3C003F2E22 /* Themes */,
 			);
 			path = UserData;
 			sourceTree = "<group>";
@@ -431,6 +450,49 @@
 			path = KeyHandling;
 			sourceTree = "<group>";
 		};
+		1BC8F7772C9F0DF5003F2E22 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1BC8F7732C9F0C73003F2E22 /* HomeView.swift */,
+				1BC8F7782C9F0E71003F2E22 /* HomeTabView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1BC8F77C2C9F0EFE003F2E22 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1BF44F902C432846001E6470 /* HomeViewSettings.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1BC8F77F2CA33C3C003F2E22 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				1BC8F7802CA33FE5003F2E22 /* Theme.swift */,
+				1BC8F7842CA35162003F2E22 /* CodableColor.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		1BC8F7822CA34A46003F2E22 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				1BC8F7862CA35E44003F2E22 /* ThemeSettings.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		1BC8F7832CA34D5B003F2E22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B7E31432C4DC384005CA8A6 /* BinaryIntegerToDigitArrayExtension.swift */,
+				1B7E31452C4DC74B005CA8A6 /* CollectionSafeIndexExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1BF1A7C92A8E4F7C00663733 = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +520,7 @@
 				1BF1A7DB2A8E4F7D00663733 /* Preview Content */,
 				1B7E315B2C519EA2005CA8A6 /* Tasks */,
 				1B8CBB462C2485D3000CE849 /* DataServices */,
+				1BC8F7832CA34D5B003F2E22 /* Extensions */,
 				1B7E31202C4D1E9E005CA8A6 /* SampleData */,
 				1B8CBB452C2485CC000CE849 /* Models */,
 				1B1028D12C2480F60088A405 /* Views */,
@@ -477,10 +540,11 @@
 		1BF44F882C4327E4001E6470 /* SupportingSettings */ = {
 			isa = PBXGroup;
 			children = (
+				1BC8F7822CA34A46003F2E22 /* Themes */,
+				1BC8F77C2C9F0EFE003F2E22 /* Home */,
 				1B7E314E2C4F2B5E005CA8A6 /* Cryptography */,
 				1BF44F8A2C43281E001E6470 /* SuggestionSettings.swift */,
 				1BF44F8C2C43282A001E6470 /* RecycleBinSettings.swift */,
-				1BF44F902C432846001E6470 /* HomeViewSettings.swift */,
 				1BF44F922C4B2800001E6470 /* BiometricSettings.swift */,
 				1BF44F972C4B4179001E6470 /* PermissionSettings.swift */,
 			);
@@ -559,6 +623,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC8F7792C9F0E71003F2E22 /* HomeTabView.swift in Sources */,
 				1BC8F73A2C73E79C003F2E22 /* KeyMetaData.swift in Sources */,
 				1BC8F7292C599794003F2E22 /* AESGCMDataService.swift in Sources */,
 				1B8CBB722C421B13000CE849 /* Setting.swift in Sources */,
@@ -567,6 +632,7 @@
 				1BC8F73C2C73E7B4003F2E22 /* EncryptionMetaData.swift in Sources */,
 				1BC8F7412C73E850003F2E22 /* EncryptionAlgorithm.swift in Sources */,
 				1B8CBB5F2C3C8DFD000CE849 /* Email.swift in Sources */,
+				1BC8F7812CA33FE5003F2E22 /* Theme.swift in Sources */,
 				1B7E31562C506D47005CA8A6 /* ExecutionTimeDataService.swift in Sources */,
 				1B1028D32C2481170088A405 /* RootView.swift in Sources */,
 				1B7E313A2C4D5B61005CA8A6 /* SampleEmails.swift in Sources */,
@@ -579,6 +645,7 @@
 				1B8CBB482C248957000CE849 /* Login.swift in Sources */,
 				1BC8F7262C598E62003F2E22 /* CryptographySettings.swift in Sources */,
 				1BC8F72B2C5997C2003F2E22 /* ChaCha20Poly1305DataService.swift in Sources */,
+				1BC8F77E2C9F9023003F2E22 /* DeviceInformationDataService.swift in Sources */,
 				1B7E31582C51970C005CA8A6 /* SampleEncryptedUserData.swift in Sources */,
 				1B7E31502C4F2F06005CA8A6 /* EncryptedUserData.swift in Sources */,
 				1B8CBB612C3DCE47000CE849 /* Folder.swift in Sources */,
@@ -586,6 +653,7 @@
 				1B7E31542C50632B005CA8A6 /* EncryptedFileSettings.swift in Sources */,
 				1BF44F912C432846001E6470 /* HomeViewSettings.swift in Sources */,
 				1BC8F7442C73E895003F2E22 /* AuthenticationRequired.swift in Sources */,
+				1BC8F7872CA35E44003F2E22 /* ThemeSettings.swift in Sources */,
 				1B7E31272C4D1F5D005CA8A6 /* SampleNotes.swift in Sources */,
 				1BC8F7362C73E740003F2E22 /* AssociatedKeyContainer.swift in Sources */,
 				1B7E31482C4E632D005CA8A6 /* PasswordEntropyDataService.swift in Sources */,
@@ -593,11 +661,13 @@
 				1B7E31292C4D1F65005CA8A6 /* SampleCards.swift in Sources */,
 				1BC8F7462C73E8BC003F2E22 /* EncryptedFileExtension.swift in Sources */,
 				1B7E31402C4D9659005CA8A6 /* URLValidatorDataService.swift in Sources */,
+				1BC8F7742C9F0C73003F2E22 /* HomeView.swift in Sources */,
 				1BF1A7D62A8E4F7C00663733 /* LocalPassApp.swift in Sources */,
 				1B7E31422C4DC12F005CA8A6 /* CardValidatorDataService.swift in Sources */,
 				1B8CBB762C4220E6000CE849 /* FolderContentType.swift in Sources */,
 				1B7E31302C4D2010005CA8A6 /* SampleLogins.swift in Sources */,
-				1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArrayDataService.swift in Sources */,
+				1B7E31442C4DC384005CA8A6 /* BinaryIntegerToDigitArrayExtension.swift in Sources */,
+				1BC8F77B2C9F0E87003F2E22 /* HomeTabViewModel.swift in Sources */,
 				1BC8F72D2C5F95D4003F2E22 /* EncryptionDataService.swift in Sources */,
 				1BF44F8F2C432838001E6470 /* KeyDerivationSettings.swift in Sources */,
 				1B7E31332C4D232D005CA8A6 /* Content.swift in Sources */,
@@ -606,9 +676,11 @@
 				1B8CBB592C3C86F0000CE849 /* Account.swift in Sources */,
 				1B8CBB5D2C3C8CCB000CE849 /* Username.swift in Sources */,
 				1B7E314C2C4EBAFF005CA8A6 /* KeyDerivationDataService.swift in Sources */,
+				1BC8F7852CA35162003F2E22 /* CodableColor.swift in Sources */,
 				1BF44F982C4B4179001E6470 /* PermissionSettings.swift in Sources */,
 				1B8CBB512C3519AA000CE849 /* Identity.swift in Sources */,
 				1BC8F73E2C73E7D5003F2E22 /* DecryptContainer.swift in Sources */,
+				1BC8F7762C9F0D00003F2E22 /* HomeViewModel.swift in Sources */,
 				1BC8F7312C6AB005003F2E22 /* AuthenticationDataService.swift in Sources */,
 				1B7E312B2C4D1F6C005CA8A6 /* SampleIdentities.swift in Sources */,
 				1B8CBB702C421623000CE849 /* UserData.swift in Sources */,
@@ -620,7 +692,7 @@
 				1B8CBB532C351C71000CE849 /* Document.swift in Sources */,
 				1B7E314A2C4EBA20005CA8A6 /* JSONSerialisationDataService.swift in Sources */,
 				1B7E31232C4D1F0F005CA8A6 /* SampleUserData.swift in Sources */,
-				1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndexDataService.swift in Sources */,
+				1B7E31462C4DC74B005CA8A6 /* CollectionSafeIndexExtension.swift in Sources */,
 				1B7E315D2C519EC2005CA8A6 /* Warmup.swift in Sources */,
 				1B7E31362C4D261E005CA8A6 /* SupportingContent.swift in Sources */,
 				1B8CBB742C4220C4000CE849 /* FolderContent.swift in Sources */,
@@ -682,7 +754,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -737,7 +809,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -769,7 +841,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -806,7 +878,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

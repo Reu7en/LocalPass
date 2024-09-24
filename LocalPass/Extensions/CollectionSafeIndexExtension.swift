@@ -1,5 +1,5 @@
 //
-//  CollectionSafeIndexDataService.swift
+//  CollectionSafeIndexExtension.swift
 //  LocalPass
 //
 //  Created by Reuben on 21/07/2024.
