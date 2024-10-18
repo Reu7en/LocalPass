@@ -47,11 +47,23 @@ struct Theme: Content {
     static let defaultThemes = [
         systemTheme,
         lightTheme,
-        darkTheme,
-        testTheme
+        darkTheme
     ]
     
+#if DEBUG
+    static let defaultTheme = testTheme
+#else
     static let defaultTheme = systemTheme
+#endif
+    
+    private static let testTheme = Theme(
+        name: "Test",
+        primaryColor: CodableColor(color: .blue),
+        secondaryColor: CodableColor(color: .purple),
+        accentColor: CodableColor(color: .red),
+        backgroundColor: CodableColor(color: .green),
+        textColor: CodableColor(color: .primary)
+    )
     
     private static let systemTheme = Theme(
         name: "System",
@@ -78,14 +90,5 @@ struct Theme: Content {
         accentColor: CodableColor(color: .accentColor),
         backgroundColor: CodableColor(color: .black),
         textColor: CodableColor(color: .white)
-    )
-    
-    private static let testTheme = Theme(
-        name: "Test",
-        primaryColor: CodableColor(color: .red),
-        secondaryColor: CodableColor(color: .green),
-        accentColor: CodableColor(color: .accentColor),
-        backgroundColor: CodableColor(color: .blue),
-        textColor: CodableColor(color: .orange)
     )
 }

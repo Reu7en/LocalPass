@@ -1,0 +1,18 @@
+//
+//  IdentitiesView.swift
+//  LocalPass
+//
+//  Created by Reuben on 01/10/2024.
+//
+
+import SwiftUI
+
+struct IdentitiesView: View {
+    var body: some View {
+        Text("Identities")
+    }
+}
+
+#Preview {
+    IdentitiesView()
+}

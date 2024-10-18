@@ -8,7 +8,7 @@
 import Foundation
 
 struct SampleUserData {
-    static var sampleUserData: UserData {
+    static var data: UserData {
         var userData = UserData()
         
         userData.accounts = Folder(

@@ -11,6 +11,15 @@ enum FolderContentType<T: FolderContent>: Codable, Equatable {
     case item(T)
     case folder(Folder<T>)
     
+    var content: any FolderContent {
+        switch self {
+        case .item(let item):
+            return item
+        case .folder(let folder):
+            return folder
+        }
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case item, folder
     }

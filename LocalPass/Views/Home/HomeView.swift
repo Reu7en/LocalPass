@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var homeViewModel: HomeViewModel
+    @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
-        HomeTabView(homeTabViewModel: HomeTabViewModel(homeTabViewSettings: homeViewModel.homeViewSettings.homeTabViewSettings))
+        Text("foo")
     }
 }
 
 #Preview {
-    HomeView(homeViewModel: HomeViewModel(homeViewSettings: HomeViewSettings()))
+    HomeView(
+        viewModel: HomeViewModel(
+            homeViewSettings: HomeViewSettings(),
+            theme: Theme.defaultTheme
+        )
+    )
 }

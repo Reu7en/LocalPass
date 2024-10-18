@@ -12,7 +12,7 @@ struct UserData: Identifiable, Codable {
     var notes: Folder<Note>?
     var cards: Folder<Card>?
     var identities: Folder<Identity>?
-    var themes: [Theme]?
+    var themes: [Theme]? //TODO: Think about merging into settings
     var userSettings: UserSettings
     
     let id: UUID

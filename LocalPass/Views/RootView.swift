@@ -46,35 +46,35 @@ struct RootView: View {
             
             Text("Accounts:\n")
             
-            ForEach(0..<(SampleUserData.sampleUserData.accounts?.contents ?? []).count, id: \.self) { accountIndex in
-                Text("\(String(describing: SampleUserData.sampleUserData.accounts?.contents?[accountIndex]))\n")
+            ForEach(0..<(SampleUserData.data.accounts?.contents ?? []).count, id: \.self) { accountIndex in
+                Text("\(String(describing: SampleUserData.data.accounts?.contents?[accountIndex]))\n")
             }
             
             Text("Notes:\n")
             
-            ForEach(0..<(SampleUserData.sampleUserData.notes?.contents ?? []).count, id: \.self) { noteIndex in
-                Text("\(String(describing: SampleUserData.sampleUserData.notes?.contents?[noteIndex]))\n")
+            ForEach(0..<(SampleUserData.data.notes?.contents ?? []).count, id: \.self) { noteIndex in
+                Text("\(String(describing: SampleUserData.data.notes?.contents?[noteIndex]))\n")
             }
             
             Text("Cards:\n")
             
-            ForEach(0..<(SampleUserData.sampleUserData.cards?.contents ?? []).count, id: \.self) { cardIndex in
-                Text("\(String(describing: SampleUserData.sampleUserData.cards?.contents?[cardIndex]))\n")
+            ForEach(0..<(SampleUserData.data.cards?.contents ?? []).count, id: \.self) { cardIndex in
+                Text("\(String(describing: SampleUserData.data.cards?.contents?[cardIndex]))\n")
             }
             
             Text("Identities:\n")
             
-            ForEach(0..<(SampleUserData.sampleUserData.identities?.contents ?? []).count, id: \.self) { identityIndex in
-                Text("\(String(describing: SampleUserData.sampleUserData.identities?.contents?[identityIndex]))\n")
+            ForEach(0..<(SampleUserData.data.identities?.contents ?? []).count, id: \.self) { identityIndex in
+                Text("\(String(describing: SampleUserData.data.identities?.contents?[identityIndex]))\n")
             }
             
             Text("User Settings:\n")
             
-            Text("\(String(describing: SampleUserData.sampleUserData.userSettings))\n")
+            Text("\(String(describing: SampleUserData.data.userSettings))\n")
             
             Text("ID:\n")
             
-            Text("\(String(describing: SampleUserData.sampleUserData.id))\n")
+            Text("\(String(describing: SampleUserData.data.id))\n")
         }
     }
 }
