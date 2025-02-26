@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AttributeBase: Base {
+protocol AttributeBase: ValidatableModelBase {
     associatedtype Value: Equatable
     
     var value: Value { get }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol EntityBase: Base, Identifiable {
+protocol EntityBase: ValidatableModelBase, Identifiable {
     var id: UUID { get }
 }
 
