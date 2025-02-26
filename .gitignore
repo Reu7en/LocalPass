@@ -24,5 +24,8 @@ Package.resolved
 ## Xcode Workspace
 *.xcworkspace
 
-##macOS system files
+## macOS system files
 .DS_Store
+
+## Dev
+Dev/

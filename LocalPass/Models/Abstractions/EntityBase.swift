@@ -8,6 +8,8 @@
 import Foundation
 
 protocol EntityBase: ValidatableModelBase, Identifiable {
+    var name: EntityName? { get set }
+    
     var id: UUID { get }
 }
 
