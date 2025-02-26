@@ -8,11 +8,11 @@
 import Foundation
 
 struct EntityName: AttributeBase {
-    static let maxLength: Int = 128
+    static let maxLength: Int = 256
     
     let value: String
     
-    init(value: String) throws {
+    init(_ value: String) throws {
         self.value = value
         
         try self.validate()
