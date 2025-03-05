@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		1BA82F1B2D6FB51C0003DCEB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA82F1A2D6FB51C0003DCEB /* File.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		1B5CDB7F2D655303001E194A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -31,7 +27,6 @@
 		1B5CDB6D2D655302001E194A /* LocalPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5CDB7E2D655303001E194A /* LocalPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5CDB882D655303001E194A /* LocalPassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalPassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BA82F1A2D6FB51C0003DCEB /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -93,7 +88,6 @@
 		1B5CDB642D655302001E194A = {
 			isa = PBXGroup;
 			children = (
-				1BA82F192D6FB4510003DCEB /* Dev */,
 				1B5CDB6F2D655302001E194A /* LocalPass */,
 				1B5CDB812D655303001E194A /* LocalPassTests */,
 				1B5CDB8B2D655303001E194A /* LocalPassUITests */,
@@ -109,14 +103,6 @@
 				1B5CDB882D655303001E194A /* LocalPassUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1BA82F192D6FB4510003DCEB /* Dev */ = {
-			isa = PBXGroup;
-			children = (
-				1BA82F1A2D6FB51C0003DCEB /* File.swift */,
-			);
-			path = Dev;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BA82F1B2D6FB51C0003DCEB /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
