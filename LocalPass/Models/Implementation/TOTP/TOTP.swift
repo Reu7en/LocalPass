@@ -53,11 +53,11 @@ class TOTP: EntityBase {
             errors.append(error)
         }
         
-        try self.throwIfNeeded(errors)
+        try self.throwIfNeeded(TOTPValidationError.self, errors, id: self.id)
     }
     
-    func changeName(to name: EntityName) throws {
-        try name.validate()
+    func changeName(to name: EntityName?) throws {
+        try name?.validate()
         
         self.name = name
     }

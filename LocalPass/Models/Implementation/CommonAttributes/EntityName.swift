@@ -8,6 +8,7 @@
 import Foundation
 
 struct EntityName: AttributeBase {
+    static let minLength: Int = 1
     static let maxLength: Int = 256
     
     let value: String
@@ -21,6 +22,10 @@ struct EntityName: AttributeBase {
         
         if self.value.isEmpty {
             errors.append(EntityNameEmpty(value: self.value))
+        }
+        
+        if self.value.count < EntityName.minLength {
+            errors.append(EntityNameTooShort(value: self.value))
         }
         
         if self.value.count > EntityName.maxLength {
