@@ -9,21 +9,31 @@ import Foundation
 
 class TOTP: EntityBase {
     private(set) var name: EntityName?
+    private(set) var starred: Starred
+    private(set) var notes: [EntityNote]?
     private(set) var secret: OTPSecret
     private(set) var algorithm: OTPAlgorithm
     private(set) var timeInterval: OTPTimeInterval
     private(set) var outputLength: OTPOutputLength
-    private(set) var starred: Starred
     
     let id: UUID
     
-    init(name: EntityName? = nil, secret: OTPSecret, algorithm: OTPAlgorithm = OTPAlgorithm.defaultAlgorithm, timeInterval: OTPTimeInterval = OTPTimeInterval(), outputLength: OTPOutputLength = OTPOutputLength(), starred: Starred = Starred()) throws {
+    init(
+        name: EntityName? = nil,
+        starred: Starred = Starred(),
+        notes: [EntityNote]? = nil,
+        secret: OTPSecret,
+        algorithm: OTPAlgorithm = OTPAlgorithm.defaultAlgorithm,
+        timeInterval: OTPTimeInterval = OTPTimeInterval(),
+        outputLength: OTPOutputLength = OTPOutputLength()
+    ) throws {
         self.name = name
+        self.starred = starred
+        self.notes = notes
         self.secret = secret
         self.algorithm = algorithm
         self.timeInterval = timeInterval
         self.outputLength = outputLength
-        self.starred = starred
         
         self.id = UUID()
         
@@ -37,6 +47,14 @@ class TOTP: EntityBase {
             try self.name?.validate()
         } catch {
             errors.append(error)
+        }
+        
+        for note in self.notes ?? [] {
+            do {
+                try note.validate()
+            } catch {
+                errors.append(error)
+            }
         }
         
         do {
@@ -53,13 +71,33 @@ class TOTP: EntityBase {
             errors.append(error)
         }
         
-        try self.throwIfNeeded(errors)
+        try self.throwIfNeeded(TOTPValidationError.self, errors, id: self.id)
     }
     
-    func changeName(to name: EntityName) throws {
-        try name.validate()
+    func changeName(to name: EntityName?) throws {
+        try name?.validate()
         
         self.name = name
+    }
+    
+    func changeStarred(to starred: Starred) {
+        self.starred = starred
+    }
+    
+    func changeNotes(to notes: [EntityNote]?) throws {
+        var errors: [any Error] = []
+        
+        for note in notes ?? [] {
+            do {
+                try note.validate()
+            } catch {
+                errors.append(error)
+            }
+        }
+        
+        try self.throwIfNeeded(errors)
+        
+        self.notes = notes
     }
     
     func changeSecret(to secret: OTPSecret) throws {
@@ -88,9 +126,5 @@ class TOTP: EntityBase {
         try outputLength.validate()
         
         self.outputLength = outputLength
-    }
-    
-    func changeStarred(to starred: Starred) {
-        self.starred = starred
     }
 }

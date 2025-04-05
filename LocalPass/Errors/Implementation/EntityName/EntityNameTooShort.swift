@@ -1,13 +1,13 @@
 //
-//  EntityNameEmpty.swift
+//  EntityNameTooShort.swift
 //  LocalPass
 //
-//  Created by Reuben on 26/02/2025.
+//  Created by Reuben on 09/03/2025.
 //
 
 import Foundation
 
-struct EntityNameEmpty: EntityNameValidationErrorBase {
+struct EntityNameTooShort: EntityNameValidationErrorBase {
     let value: EntityName.Value
     let message: String?
     let inner: (any Error)?
